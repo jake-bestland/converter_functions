@@ -39,3 +39,63 @@ function KmToM(km) {
     let miles = (km / 1.60934);
     return miles;
 }
+
+// Defining variables
+const tempDropdown = document.getElementById("tempDropdown");
+const lengthDropdown = document.getElementById("lengthDropdown");
+let convertedTempDropdown = document.getElementById("convertedTempDropdown");
+let convertedLengthDropdown = document.getElementById("convertedLengthDropdown");
+
+const selectedTempValue = tempDropdown.value;
+const selectedTempText = tempDropdown.textContent;
+let convertedTempValue = convertedTempDropdown.value;
+let convertedTempText = convertedTempDropdown.textContent;
+
+const selectedLengthValue = lengthDropdown.value;
+const selectedLengthText = lengthDropdown.textContent;
+let convertedLengthValue = convertedLengthDropdown.value;
+let convertedLengthText = convertedLengthDropdown.textContent;
+
+
+let tempOptions = ["Fahrenheidt", "Celcius", "Kelvin"]
+for (let i = 0; i < tempOptions.length; i++) {
+    let opt = tempOptions[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    tempDropdown.appendChild(el);
+    let el2 = document.createElement("option");
+    el2.textContent = opt;
+    el2.value = opt;
+    convertedTempDropdown.appendChild(el2);
+    
+}
+
+let lengthOptions = ["Inch", "Centimeter", "Mile", "Kilometer"]
+for (let i = 0; i < lengthOptions.length; i++) {
+    let opt = lengthOptions[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    lengthDropdown.appendChild(el);
+    let el2 = document.createElement("option");
+    el2.textContent = opt;
+    el2.value = opt;
+    convertedLengthDropdown.appendChild(el2);
+}
+
+tempDropdown.addEventListener("change", function(event) {
+    console.log("Selected value:", event.target.value);
+});
+
+convertedTempDropdown.addEventListener("change", function(event) {
+    console.log("Selected value:", event.target.value);
+});
+
+lengthDropdown.addEventListener("change", function(event) {
+    console.log("Selected value:", event.target.value);
+});
+
+convertedLengthDropdown.addEventListener("change", function(event) {
+    console.log("Selected value:", event.target.value);
+});
