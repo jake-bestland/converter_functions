@@ -9,8 +9,40 @@
 
     <body>
         <h1>Online Converter functions</h1>
-        <div>
-            
+        <div class="main-div">
+            <div class="converter-input">
+                <table>
+                    <tr>
+                        <th>Temperature</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" id="temp-number-to-convert">
+                            <select id="tempDropdown"></select>
+                        </td>
+                        <td>=</td>
+                        <td>
+                            <input type="number" id="temp-converted-number">
+                            <select id="convertedTempDropdown"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Length</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" id="length-number-to-convert">
+                            <select id="lengthDropdown"></select>
+                        </td>
+                        <td>=</td>
+                        <td>
+                            <input type="number" id="length-converted-number">
+                            <select id="convertedLengthDropdown"></select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
+        <script src="converter_func.js"></script>
     </body>
 </html>
