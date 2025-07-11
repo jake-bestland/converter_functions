@@ -1,4 +1,9 @@
 // Temp converters
+function FtoC(tempInF) {
+    let tempInC = (tempInF -32) * (5 / 9);
+    return tempInC
+}
+
 function KtoC(tempInK) {
     let tempInC = (tempInK - 273.15);
     return tempInC;
