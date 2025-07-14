@@ -4,9 +4,19 @@ function FtoC(tempInF) {
     return tempInC
 }
 
+function FtoK(tempInF) {
+    let tempInK = ((tempInF - 32) * (5 / 9) + 273.15);
+    return tempInK;
+}
+
 function KtoC(tempInK) {
     let tempInC = (tempInK - 273.15);
     return tempInC;
+}
+
+function KtoF(tempInK) {
+    let tempInF = ((tempInK - 273.15) * (9 / 5) + 32);
+    return tempInF;
 }
 
 function CtoK(tempInC) {
@@ -14,15 +24,12 @@ function CtoK(tempInC) {
     return tempInK;
 }
 
-function FtoK(tempInF) {
-    let tempInK = ((tempInF - 32) * (5 / 9) + 273.15);
-    return tempInK;
-}
-
-function KtoF(tempInK) {
-    let tempInF = ((tempInK - 273.15) * (9 / 5) + 32);
+function CtoF(tempInC) {
+    let tempInF = ((tempInC * (9 / 5)) + 32);
     return tempInF;
 }
+
+
 
 // Length converters
 function inchToCm(inch) {
