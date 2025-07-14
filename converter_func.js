@@ -102,6 +102,84 @@ for (let i = 0; i < lengthOptions.length; i++) {
     convertedLengthDropdown.appendChild(el2);
 }
 
+// function handleTempInputChange() {
+//     let inputScale = tempDropdown.value;
+//     let convertedScale = convertedTempDropdown.value;
+//     let initialValue = parseFloat()
+//     if (inputScale == "Fahrenheidt") {
+//         if (convertedScale == "Celcius") {
+            
+//         }
+//     }
+// }
+
+
+tempInputToConvert.addEventListener("change", function(event) {
+    let inputScale = tempDropdown.value;
+    let convertedScale = convertedTempDropdown.value;
+    let initialValue = parseFloat(event.target.value);
+    if (inputScale == "Fahrenheidt") {
+        if (convertedScale == "Celcius") {
+            let newValue = FtoC(initialValue)
+            convertedTempInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kelvin") {
+            let newValue = FtoK(initialValue)
+            convertedTempInput.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Celcius") {
+        if (convertedScale == "Fahrenheidt") {
+            let newValue = CtoF(initialValue);
+            convertedTempInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kelvin") {
+            let newValue = CtoK(initialValue);
+            convertedTempInput.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Kelvin") {
+        if (convertedScale == "Fahrenheidt") {
+            let newValue = KtoF(initialValue);
+            convertedTempInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Celcius") {
+            let newValue = KtoC(initialValue);
+            convertedTempInput.value = newValue.toFixed(2);
+        }
+    }
+});
+
+convertedTempInput.addEventListener("change", function(event) {
+    let inputScale = convertedTempDropdown.value;
+    let convertedScale = tempDropdown.value;
+    let initialValue = parseFloat(event.target.value);
+    if (inputScale == "Fahrenheidt") {
+        if (convertedScale == "Celcius") {
+            let newValue = FtoC(initialValue)
+            tempInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kelvin") {
+            let newValue = FtoK(initialValue)
+            tempInputToConvert.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Celcius") {
+        if (convertedScale == "Fahrenheidt") {
+            let newValue = CtoF(initialValue);
+            tempInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kelvin") {
+            let newValue = CtoK(initialValue);
+            tempInputToConvert.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Kelvin") {
+        if (convertedScale == "Fahrenheidt") {
+            let newValue = KtoF(initialValue);
+            tempInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Celcius") {
+            let newValue = KtoC(initialValue);
+            tempInputToConvert.value = newValue.toFixed(2);
+        }
+    }
+});
+
+lengthInputToConvert.addEventListener("change")
+
+convertedLengthInput.addEventListener("change")
+
 tempDropdown.addEventListener("change", function(event) {
     console.log("Selected value:", event.target.value);
 });
