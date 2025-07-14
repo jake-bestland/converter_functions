@@ -52,11 +52,17 @@ function KmToM(km) {
     return miles;
 }
 
-// Defining variables
+// Defining Dropdown boxes
 const tempDropdown = document.getElementById("tempDropdown");
 const lengthDropdown = document.getElementById("lengthDropdown");
-let convertedTempDropdown = document.getElementById("convertedTempDropdown");
-let convertedLengthDropdown = document.getElementById("convertedLengthDropdown");
+const convertedTempDropdown = document.getElementById("convertedTempDropdown");
+const convertedLengthDropdown = document.getElementById("convertedLengthDropdown");
+
+// Defining Input boxes
+const tempInputToConvert = document.getElementById("temp-number-to-convert");
+const convertedTempInput = document.getElementById("temp-converted-number");
+const lengthInputToConvert = document.getElementById("length-number-to-convert");
+const convertedLengthInput = document.getElementById("length-converted-number");
 
 const selectedTempValue = tempDropdown.value;
 const selectedTempText = tempDropdown.textContent;
