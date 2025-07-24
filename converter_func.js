@@ -216,9 +216,107 @@ convertedTempInput.addEventListener("change", function(event) {
     }
 });
 
-lengthInputToConvert.addEventListener("change")
+lengthInputToConvert.addEventListener("change", function(event) {
+    let inputScale = lengthDropdown.value;
+    let convertedScale = convertedLengthDropdown.value;
+    let initialValue = parseFloat(event.target.value);
+    if (inputScale == "Inch") {
+        if (convertedScale == "Centimeter") {
+            let newValue = inchToCm(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Mile") {
+            let newValue = inchToM(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kilometer") {
+            let newValue = inchToKm(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Centimeter") {
+        if (convertedScale == "Inch") {
+            let newValue = CmToInch(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Mile") {
+            let newValue = CmToM(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kilometer") {
+            let newValue = CmToKm(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Mile") {
+        if (convertedScale == "Inch") {
+            let newValue = MToInch(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Centimeter") {
+            let newValue = MToCm(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kilometer") {
+            let newValue = MToKm(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Kilometer") {
+        if (convertedScale == "Mile") {
+            let newValue = KmToM(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Inch") {
+            let newValue = KmToInch(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        } else if (convertedScale == "Centimeter") {
+            let newValue = KmToCm(initialValue);
+            convertedLengthInput.value = newValue.toFixed(2);
+        }
+    }
+});
 
-convertedLengthInput.addEventListener("change")
+convertedLengthInput.addEventListener("change", function(event) {
+    let inputScale = convertedLengthDropdown.value;
+    let convertedScale = lengthDropdown.value;
+    let initialValue = parseFloat(event.target.value);
+    if (inputScale == "Inch") {
+        if (convertedScale == "Centimeter") {
+            let newValue = inchToCm(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Mile") {
+            let newValue = inchToM(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kilometer") {
+            let newValue = inchToKm(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Centimeter") {
+        if (convertedScale == "Inch") {
+            let newValue = CmToInch(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Mile") {
+            let newValue = CmToM(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kilometer") {
+            let newValue = CmToKm(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Mile") {
+        if (convertedScale == "Inch") {
+            let newValue = MToInch(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Centimeter") {
+            let newValue = MToCm(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Kilometer") {
+            let newValue = MToKm(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        }
+    } else if (inputScale == "Kilometer") {
+        if (convertedScale == "Mile") {
+            let newValue = KmToM(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Inch") {
+            let newValue = KmToInch(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        } else if (convertedScale == "Centimeter") {
+            let newValue = KmToCm(initialValue);
+            lengthInputToConvert.value = newValue.toFixed(2);
+        }
+    }
+});
 
 tempDropdown.addEventListener("change", function(event) {
     console.log("Selected value:", event.target.value);
