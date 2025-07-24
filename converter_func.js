@@ -37,9 +37,29 @@ function inchToCm(inch) {
     return cm;
 }
 
+function inchToM(inch) {
+    let miles = (inch / 63360);
+    return miles;
+}
+
+function inchToKm(inch) {
+    let km = (inch / 39370.1);
+    return km;
+}
+
 function CmToInch(cm) {
     let inch = (cm / 2.54);
     return inch;
+}
+
+function CmToM(cm) {
+    let miles = (cm / 160934);
+    return miles;
+}
+
+function CmToKm(cm) {
+    let km = (cm / 100000);
+    return km;
 }
 
 function MToKm(miles) {
@@ -47,9 +67,29 @@ function MToKm(miles) {
     return km;
 }
 
+function MToInch(miles) {
+    let inch = (miles * 63360);
+    return inch;
+}
+
+function MToCm(miles) {
+    let cm = (miles * 160934);
+    return cm;
+}
+
 function KmToM(km) {
     let miles = (km / 1.60934);
     return miles;
+}
+
+function KmToInch(km) {
+    let inch = (km * 39370.1);
+    return inch;
+}
+
+function KmToCm(km) {
+    let cm = (km * 100000);
+    return cm;
 }
 
 // Defining Dropdown boxes
